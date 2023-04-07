@@ -33,19 +33,19 @@ public class Program
 						case 1:
 						case 2:
 						case 3:
-							uspeh = "jako lo�";
+							uspeh = "jako los";
 							koeficijent = 0.85;
 							break;
 						case 4:
 						case 5:
-							uspeh = "prose�an";
+							uspeh = "prosecan";
 							break;
 						case 10:
 							uspeh = "izuzetan";
 							koeficijent = 1.15;
 							break;
 						default:
-							uspeh = "odli�an";
+							uspeh = "odlican";
 							break;
 					}
 
@@ -141,16 +141,19 @@ public class Program
 			float b = 0.0F;
 			float c = 0.0F;
 			string ispis = "GRESKA: Neocekivani prekid programa usled pogresnog unosa  stranice ";
+            Console.WriteLine("======= Uneti stranicu a: =======");
 			bool isAValid = float.TryParse(Console.ReadLine(), out a);
 			if (isAValid && a > 0)
 			{
+                Console.WriteLine("======= Uneti stranicu b: =======");
 				bool isBValid = float.TryParse(Console.ReadLine(), out b);
 				if (isBValid && b > 0)
 				{
+                    Console.WriteLine("======= Uneti stranicu c: =======");
 					bool isCValid = float.TryParse(Console.ReadLine(), out c);
 					if (isCValid && c > 0)
 					{
-						string templateRecenica = $"Trougao sa stranicama {a}, {b}, {c}, je";
+						string templateRecenica = $"Trougao sa stranicama {a}, {b}, {c} je";
 						if (a == b && b == c)
 						{
 							ispis = $"{templateRecenica} jednakostranicni.";
